@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule, 
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCgnmbavyf-ot24_E8Mh9dijjurS6xW5QA'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

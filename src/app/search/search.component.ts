@@ -9,6 +9,11 @@ import { StylesCompileDependency } from '../../../node_modules/@angular/compiler
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  // lat: number = 51.678418;
+  // lng: number = 7.809007;
+
+  lat;
+  lng;
 
   constructor(private service: SearchService) { }
 
@@ -51,6 +56,9 @@ export class SearchComponent implements OnInit {
       console.log(this.i - 1)
       this.number = Math.floor(Math.random() * this.i - 1);
       // this.id = this.answers[this.number].id
+      this.lat = this.answers[this.number].coordinates.latitude
+      this.lng = this.answers[this.number].coordinates.longitude
+      console.log(this.lat, this.lng)
     })
   }
 
