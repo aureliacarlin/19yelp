@@ -27,7 +27,7 @@
     <div *ngIf="answers != 0; else noResults">
       <img class="img" src="{{answers[number].image_url}}" style="width: 400px; height: 400px">
       <div class="container">
-        <h2>{{answers[number].name}}</h2>
+        <a target="_blank" href="{{answers[number].url}}"><h2>{{answers[number].name}}</h2></a>
         <h3>Address:</h3>
         <p>{{answers[number].location.display_address}}</p>
         <h3>Phone number:</h3>
