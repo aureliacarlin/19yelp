@@ -1,0 +1,75 @@
+<form [formGroup]='profileForm' (ngSubmit)='onSubmit()'>
+  <label>
+    Price:
+    <select name='price' formControlName='price'>
+      <option value='1'>$</option>
+      <option value='2'>$$</option>
+      <option value='3'>$$$</option>
+      <option value='4'>$$$$</option>
+    </select>
+  </label>
+
+  <label>
+    City:
+    <input type='text' formControlName='city'>
+  </label>
+
+  <label>
+    State:
+    <input type='text' formControlName='state'>
+  </label>
+
+  <button type='submit'>Submit</button>
+</form>
+
+<div>
+  <!-- <div *ngIf="dataTwo"> -->
+    <ul *ngIf="answers">
+      <!-- <ul *ngFor="let stuffs of dataTwo.hours"> -->
+        <!-- <div *ngIf="stuffs.is_open_now; else tryTwo"> -->
+          <!-- <li >{{stuffs.is_open_now}}</li> -->
+          <li>{{answers[number].name}}</li> 
+          <li>{{answers[number].location.display_address}}</li>
+          <li>{{answers[number].phone}}</li>
+          <li>{{answers[number].price}}</li>
+          <!-- <li *ngFor="let stuff of answers[number].transactions">{{stuff}}</li>  -->
+          <!-- <li>{{answers[number].rating}}</li> -->
+          <div *ngIf="answers[number].rating === 0">
+            <img src="../../assets/starts/yelp_stars/stars_regular_0.png">
+          </div>
+          <div *ngIf="answers[number].rating === 1">
+            <img src="../../assets/starts/yelp_stars/stars_regular_1.png">
+          </div>
+          <div *ngIf="answers[number].rating === 1.5">
+              <img src="../../assets/starts/yelp_stars/stars_regular_1_half.png">
+            </div>
+          <div *ngIf="answers[number].rating === 2">
+            <img src="../../assets/starts/yelp_stars/stars_regular_2.png">
+          </div>
+          <div *ngIf="answers[number].rating === 2.5">
+            <img src="../../assets/starts/yelp_stars/stars_regular_2_half.png">
+          </div>
+          <div *ngIf="answers[number].rating === 3">
+            <img src="../../assets/starts/yelp_stars/stars_regular_3.png">
+          </div>
+          <div *ngIf="answers[number].rating === 3.5">
+            <img src="../../assets/starts/yelp_stars/stars_regular_3_half.png">
+          </div>
+          <div *ngIf="answers[number].rating === 4">
+            <img src="../../assets/starts/yelp_stars/stars_regular_4.png">
+          </div>
+          <div *ngIf="answers[number].rating === 4.5">
+            <img src="../../assets/starts/yelp_stars/stars_regular_4_half.png">
+          </div>
+          <div *ngIf="answers[number].rating === 5">
+            <img src="../../assets/starts/yelp_stars/stars_regular_5.png">
+          </div>
+          <li><img class="img" src="{{answers[number].image_url}}"></li>
+        <!-- </div> -->
+     </ul>
+      <!-- <ng-template #tryTwo>
+        {{second()}}
+      </ng-template> -->
+    <!-- </ul>  -->
+  <!-- </div> -->
+</div>
