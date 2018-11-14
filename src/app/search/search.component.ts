@@ -45,7 +45,7 @@ export class SearchComponent implements OnInit {
       this.answers = this.results.businesses
       console.log(this.answers)
       this.number = Math.floor(Math.random() * 4);
-      this.id = this.answers[this.number].id
+      // this.id = this.answers[this.number].id
     })
   }
 
