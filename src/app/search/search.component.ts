@@ -21,6 +21,8 @@ export class SearchComponent implements OnInit {
   dataTwo;
   open;
 
+  i;
+
   ngOnInit() {
   }
 
@@ -44,7 +46,10 @@ export class SearchComponent implements OnInit {
       this.results = data
       this.answers = this.results.businesses
       console.log(this.answers)
-      this.number = Math.floor(Math.random() * 4);
+      for( this.i=0; this.i<this.answers.length; this.i++) {
+      }
+      console.log(this.i - 1)
+      this.number = Math.floor(Math.random() * this.i - 1);
       // this.id = this.answers[this.number].id
     })
   }

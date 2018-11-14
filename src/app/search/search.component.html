@@ -22,44 +22,48 @@
   <button type='submit'>Submit</button>
 </form>
 
-<div>
-  <div *ngIf="answers">
+<div class="card">
+  <div class="cards" *ngIf="answers">
     <div *ngIf="answers != 0; else noResults">
-      <p>{{answers[number].name}}</p>
-      <p>{{answers[number].location.display_address}}</p>
-      <p>{{answers[number].phone}}</p>
-      <p>{{answers[number].price}}</p>
-      <div *ngIf="answers[number].rating === 0">
-        <img src="../../assets/starts/yelp_stars/stars_regular_0.png">
+      <img class="img" src="{{answers[number].image_url}}" style="width: 400px; height: 400px">
+      <div class="container">
+        <h2>{{answers[number].name}}</h2>
+        <h3>Address:</h3>
+        <p>{{answers[number].location.display_address}}</p>
+        <h3>Phone number:</h3>
+        <p>{{answers[number].phone}}</p>
+        <p>{{answers[number].price}}</p>
+        <div *ngIf="answers[number].rating === 0">
+          <img src="../../assets/starts/yelp_stars/stars_regular_0.png">
+        </div>
+        <div *ngIf="answers[number].rating === 1">
+          <img src="../../assets/starts/yelp_stars/stars_regular_1.png">
+        </div>
+        <div *ngIf="answers[number].rating === 1.5">
+          <img src="../../assets/starts/yelp_stars/stars_regular_1_half.png">
+        </div>
+        <div *ngIf="answers[number].rating === 2">
+          <img src="../../assets/starts/yelp_stars/stars_regular_2.png">
+        </div>
+        <div *ngIf="answers[number].rating === 2.5">
+          <img src="../../assets/starts/yelp_stars/stars_regular_2_half.png">
+        </div>
+        <div *ngIf="answers[number].rating === 3">
+          <img src="../../assets/starts/yelp_stars/stars_regular_3.png">
+        </div>
+        <div *ngIf="answers[number].rating === 3.5">
+          <img src="../../assets/starts/yelp_stars/stars_regular_3_half.png">
+        </div>
+        <div *ngIf="answers[number].rating === 4">
+          <img src="../../assets/starts/yelp_stars/stars_regular_4.png">
+        </div>
+        <div *ngIf="answers[number].rating === 4.5">
+          <img src="../../assets/starts/yelp_stars/stars_regular_4_half.png">
+        </div>
+        <div *ngIf="answers[number].rating === 5">
+          <img src="../../assets/starts/yelp_stars/stars_regular_5.png">
+        </div>
       </div>
-      <div *ngIf="answers[number].rating === 1">
-        <img src="../../assets/starts/yelp_stars/stars_regular_1.png">
-      </div>
-      <div *ngIf="answers[number].rating === 1.5">
-        <img src="../../assets/starts/yelp_stars/stars_regular_1_half.png">
-      </div>
-      <div *ngIf="answers[number].rating === 2">
-        <img src="../../assets/starts/yelp_stars/stars_regular_2.png">
-      </div>
-      <div *ngIf="answers[number].rating === 2.5">
-        <img src="../../assets/starts/yelp_stars/stars_regular_2_half.png">
-      </div>
-      <div *ngIf="answers[number].rating === 3">
-        <img src="../../assets/starts/yelp_stars/stars_regular_3.png">
-      </div>
-      <div *ngIf="answers[number].rating === 3.5">
-        <img src="../../assets/starts/yelp_stars/stars_regular_3_half.png">
-      </div>
-      <div *ngIf="answers[number].rating === 4">
-        <img src="../../assets/starts/yelp_stars/stars_regular_4.png">
-      </div>
-      <div *ngIf="answers[number].rating === 4.5">
-        <img src="../../assets/starts/yelp_stars/stars_regular_4_half.png">
-      </div>
-      <div *ngIf="answers[number].rating === 5">
-        <img src="../../assets/starts/yelp_stars/stars_regular_5.png">
-      </div>
-      <li><img class="img" src="{{answers[number].image_url}}"></li>
     </div>
     <ng-template #noResults>
       <h2>Results not found. Try chaning your parameters</h2>
