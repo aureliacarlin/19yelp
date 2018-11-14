@@ -8,7 +8,11 @@
 }
 
 .cards {
-    margin-top: 5%
+    margin-top: 5%;
+}
+
+.carding {
+    display: inline-block;
 }
 
 /* On mouse-over, add a deeper shadow */

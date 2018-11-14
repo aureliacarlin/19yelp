@@ -22,7 +22,7 @@
   <button type='submit'>Submit</button>
 </form>
 
-<div class="card">
+<div class="card carding">
   <div class="cards" *ngIf="answers">
     <div *ngIf="answers != 0; else noResults">
       <img class="img" src="{{answers[number].image_url}}" style="width: 400px; height: 400px">
@@ -71,6 +71,6 @@
   </div>
 </div>
 
-<agm-map [latitude]="lat" [longitude]="lng">
+<agm-map class="carding" [latitude]="lat" [longitude]="lng">
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
